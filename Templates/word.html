@@ -1,0 +1,17 @@
+
+
+{% extends "base.html" %}
+{% block content %}
+<h1>{{word}}</h1>
+
+<p>
+  <h4> definitions </h4>
+  {% for defn in definitions %}
+
+  <li> {{defn}} </li>
+  {% endfor %}
+  {% if not definitions %}
+    No se encontró
+  {% endif %}
+</p>
+{% endblock %}

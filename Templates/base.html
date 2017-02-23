@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title or "Words App" }}</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" />
+  <link rel="stylesheet" href="{{url_for("static", filename="css/styles.css")}}">
+</head>
+<body>
+  <header>
+    <h3> Words app </h3>
+  </header>
+  <div class="container">
+
+  <!-- columns should be the immediate child of a .row -->
+  <div class="row">
+    <div class="tweleve columns">
+      {% block content %}
+        Esta es la parte del contenido de la app.
+      {% endblock %}
+    </div>
+  </div>
+
+</div>
+
+  {# Esto es un comentario de jinja #}
+  <!-- Comentario -->
+
+  {% block footer %}
+  {% endblock %}
+</body>
+</html>
